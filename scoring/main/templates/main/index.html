@@ -1,3 +1,72 @@
+{% load static %}
+<style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg .tg-nrix{text-align:center;vertical-align:middle}
+  </style>
+  <table class="tg">
+  <thead>
+    <tr>
+      <th class="tg-nrix" colspan="2">测评要素</th>
+      {% for item in scoring_items %}
+        <th class="tg-nrix">{{item}}</th>
+      {% endfor %}
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg-nrix" colspan="2">分值</td>
+      <td class="tg-nrix">35</td>
+      <td class="tg-nrix">30</td>
+      <td class="tg-nrix">25</td>
+      <td class="tg-nrix">10</td>
+    </tr>
+    <tr>
+      <td class="tg-nrix" rowspan="3">评分标准</td>
+      <td class="tg-nrix">优</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+    </tr>
+    <tr>
+      <td class="tg-nrix">中等</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+    </tr>
+    <tr>
+      <td class="tg-nrix">一般</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+    </tr>
+    <tr>
+      <td class="tg-nrix" colspan="2">要素得分</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+      <td class="tg-nrix">1</td>
+    </tr>
+    <tr>
+      <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
+      <td class="tg-nrix" colspan="2" rowspan="2"></td>
+      <td class="tg-nrix">总分</td>
+      <td class="tg-nrix">1</td>
+    </tr>
+    <tr>
+      <td class="tg-nrix">__号考官签名</td>
+      <td class="tg-nrix">1</td>
+    </tr>
+  </tbody>
+  </table>
+
 <style type="text/css">
     .tg  {border-collapse:collapse;border-spacing:0;}
     .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -57,7 +126,7 @@
         <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
         <td class="tg-nrix" colspan="2" rowspan="2"></td>
         <td class="tg-nrix">总分</td>
-        <td class="tg-nrix">·1</td>
+        <td class="tg-nrix">1</td>
       </tr>
       <tr>
         <td class="tg-nrix">__号考官签名</td>
