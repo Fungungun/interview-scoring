@@ -1,4 +1,7 @@
 {% load static %}
+<head>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
 <style type="text/css">
   .tg  {border-collapse:collapse;border-spacing:0;}
   .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -7,130 +10,352 @@
     font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
   .tg .tg-nrix{text-align:center;vertical-align:middle}
   </style>
-  <table class="tg">
-  <thead>
-    <tr>
-      <th class="tg-nrix" colspan="2">测评要素</th>
-      {% for item in scoring_items %}
-        <th class="tg-nrix">{{item}}</th>
-      {% endfor %}
+<style>
+  #sig-canvas {
+  border: 2px dotted #CCCCCC;
+  border-radius: 15px;
+  cursor: crosshair;
+}
+</style>
+ <body>
+   <div >
+    <form method="POST" action="saveForm" id="mainForm">
+      {% csrf_token %}
+      <label for="draw_id">考生抽签号</label>
+      <select name="draw_id" id="draw_id">
+        {% for item in draw_id %}
+        <option value="{{item}}">{{item}}</option>   
+        {% endfor %}
+      </select>
+    
       
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="tg-nrix" colspan="2">分值</td>
-      <td class="tg-nrix">35</td>
-      <td class="tg-nrix">30</td>
-      <td class="tg-nrix">25</td>
-      <td class="tg-nrix">10</td>
-    </tr>
-    <tr>
-      <td class="tg-nrix" rowspan="3">评分标准</td>
-      <td class="tg-nrix">优</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-    </tr>
-    <tr>
-      <td class="tg-nrix">中等</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-    </tr>
-    <tr>
-      <td class="tg-nrix">一般</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-    </tr>
-    <tr>
-      <td class="tg-nrix" colspan="2">要素得分</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-      <td class="tg-nrix">1</td>
-    </tr>
-    <tr>
-      <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
-      <td class="tg-nrix" colspan="2" rowspan="2"></td>
-      <td class="tg-nrix">总分</td>
-      <td class="tg-nrix">1</td>
-    </tr>
-    <tr>
-      <td class="tg-nrix">__号考官签名</td>
-      <td class="tg-nrix">1</td>
-    </tr>
-  </tbody>
-  </table>
 
-<style type="text/css">
-    .tg  {border-collapse:collapse;border-spacing:0;}
-    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-      overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg .tg-nrix{text-align:center;vertical-align:middle}
-    </style>
-    <table class="tg">
-    <thead>
-      <tr>
-        <th class="tg-nrix" colspan="2">测评要素</th>
-        <th class="tg-nrix">考察项目1</th>
-        <th class="tg-nrix">考察项目2</th>
-        <th class="tg-nrix">考察项目3</th>
-        <th class="tg-nrix">考察项目4</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="tg-nrix" colspan="2">分值</td>
-        <td class="tg-nrix">35</td>
-        <td class="tg-nrix">30</td>
-        <td class="tg-nrix">25</td>
-        <td class="tg-nrix">10</td>
-      </tr>
-      <tr>
-        <td class="tg-nrix" rowspan="3">评分标准</td>
-        <td class="tg-nrix">优</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-      </tr>
-      <tr>
-        <td class="tg-nrix">中等</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-      </tr>
-      <tr>
-        <td class="tg-nrix">一般</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-      </tr>
-      <tr>
-        <td class="tg-nrix" colspan="2">要素得分</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-        <td class="tg-nrix">1</td>
-      </tr>
-      <tr>
-        <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
-        <td class="tg-nrix" colspan="2" rowspan="2"></td>
-        <td class="tg-nrix">总分</td>
-        <td class="tg-nrix">1</td>
-      </tr>
-      <tr>
-        <td class="tg-nrix">__号考官签名</td>
-        <td class="tg-nrix">1</td>
-      </tr>
-    </tbody>
-    </table>
+      <table class="tg">
+      <thead>
+        <tr>
+          <th class="tg-nrix" colspan="2">测评要素</th>
+          {% for item in scoring_items %}
+            <th class="tg-nrix">{{item.name}}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-nrix" colspan="2">分值</td>
+          {% for item in scoring_items %}
+          <td class="tg-nrix">{{item.maximum_score}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td class="tg-nrix" rowspan="3">评分标准</td>
+          <td class="tg-nrix">优</td>
+          {% for item in scoring_items %}
+          <td class="tg-nrix">{{item.good}}</td>
+          {% endfor %}
+          
+        </tr>
+        <tr>
+          <td class="tg-nrix">中等</td>
+          {% for item in scoring_items %}
+          <td class="tg-nrix">{{item.ok}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td class="tg-nrix">一般</td>
+          {% for item in scoring_items %}
+          <td class="tg-nrix">{{item.normal}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td class="tg-nrix" colspan="2">要素得分</td>
+          {% for item in scoring_items %}
+          <td class="tg-nrix scoring_item" maximum_score="{{item.maximum_score}}">
+          </td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
+          <td class="tg-nrix" colspan="{{colspan}}" rowspan="2">
+            <textarea name="comment" id="comment" style="width: 100%; height:100%; text-align:center"></textarea>
+          </td>
+          <td class="tg-nrix">总分</td>
+          <td class="tg-nrix">
+            <input type="number" id="total_score" readonly style="border:none;text-align:center">
+          </td>
+        </tr>
+        <tr>
+          <td class="tg-nrix">
+            <select name="examiner_id" id="examiner_id">
+            {% for item in examiner_id %}
+            <option value="{{item}}">{{item}}</option>   
+            {% endfor %}
+          </select> 号考官签名</td>
+          <td class="tg-nrix">
+            
+              <!-- Content -->
+      <div class="container">
+             <canvas id="sig-canvas">
+               
+             </canvas>
+      </div>
+    
+            
+          </td>
+        </tr>
+      </tbody>
+      </table>
+    
+      <input name="sig_url" id="sig_url" hidden />
+      <input name="current_dt" id="current_dt" hidden/>
+    
+      
+    </form>
+
+    
+    <button class="btn btn-primary" id="sig-submitBtn">提交表格</button>
+
+    <button class="btn btn-default" id="sig-clearBtn">清除签名</button>
+   </div>
+
+
+
+</body> 
+
+
+<script>
+  // submit form 
+  var submitBtn = document.getElementById("sig-submitBtn");
+  var canvas = document.getElementById("sig-canvas");
+
+  submitBtn.addEventListener("click", function(e) {
+    var dataUrl = canvas.toDataURL();
+    document.getElementById("sig_url").value = dataUrl;
+    var now = new Date();
+    var dateString = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate()
+    // alert(dateString);
+    document.getElementById("current_dt").value =  dateString;
+    // alert(document.getElementById("current_dt").value)
+
+    // alert(dataUrl);  
+    $("#mainForm").submit();
+    
+  }, false);
+</script>
+
+
+
+ 
+
+<script>
+  function calTotalScore() {
+    var scoreNew = 0
+    var scoring_items = document.getElementsByClassName("scoring_item");
+    for (var i = 0; i < scoring_items.length; i++) {
+      var select_elem = scoring_items[i].getElementsByTagName("select").item(0);
+      // console.log(select_elem.value);
+      scoreNew += Number(select_elem.value)
+    }
+    document.getElementById("total_score").value = scoreNew;
+}
+</script>
+
+<!-- init -->
+<script>
+  $( document ).ready(function() {
+    
+
+    var scoring_items = document.getElementsByClassName("scoring_item");
+    for (var i = 0; i < scoring_items.length; i++) {
+      var select_elem = document.createElement("select");
+      select_elem.setAttribute("name", "selected-score-"+i);
+      // select_elem.setAttribute("id", "selected-score-"+i);
+      var maximum_score = scoring_items[i].getAttribute("maximum_score");
+      for (let option = 1; option <= Number(maximum_score); option++){
+        var option_elem = document.createElement("option");
+        option_elem.setAttribute("value", option);
+        option_elem.innerText = option;
+        select_elem.appendChild(option_elem);
+        select_elem.selectedIndex = 0;
+      }
+      scoring_items[i].appendChild(select_elem);
+    }
+    calTotalScore();
+  });
+</script>
+<!-- init -->
+
+<!-- select score action -->
+<script>
+  $('.scoring_item').on('change', function() {
+    calTotalScore();
+}) 
+</script>
+<!-- select score action -->
+
+<!-- scroll lock -->
+<script>
+  // src/utils/scroll-lock.js
+  const $body = document.querySelector('body');
+  let scrollPosition = 0;
+
+  scrollPosition = window.pageYOffset;
+  $body.style.overflow = 'hidden';
+  $body.style.position = 'fixed';
+  $body.style.top = `-${scrollPosition}px`;
+  $body.style.width = '100%';
+
+
+    // $body.style.removeProperty('overflow');
+    // $body.style.removeProperty('position');
+    // $body.style.removeProperty('top');
+    // $body.style.removeProperty('width');
+    // window.scrollTo(0, scrollPosition);
+
+
+</script>
+
+<!-- scroll lock -->
+
+<!-- canvas setting -->
+<script>
+  document.body.addEventListener('touchmove', function(event) {
+event.preventDefault();
+}, false); 
+
+  (function() {
+window.requestAnimFrame = (function(callback) {
+  return window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimaitonFrame ||
+    function(callback) {
+      window.setTimeout(callback, 1000 / 60);
+    };
+})();
+
+var canvas = document.getElementById("sig-canvas");
+
+var ctx = canvas.getContext("2d");
+ctx.strokeStyle = "#222222";
+ctx.lineWidth = 4;
+
+var drawing = false;
+var mousePos = {
+  x: 0,
+  y: 0
+};
+var lastPos = mousePos;
+
+canvas.addEventListener("mousedown", function(e) {
+  drawing = true;
+  lastPos = getMousePos(canvas, e);
+}, false);
+
+canvas.addEventListener("mouseup", function(e) {
+  drawing = false;
+}, false);
+
+canvas.addEventListener("mousemove", function(e) {
+  mousePos = getMousePos(canvas, e);
+}, false);
+
+// Add touch event support for mobile
+canvas.addEventListener("touchstart", function(e) {
+
+}, false);
+
+canvas.addEventListener("touchmove", function(e) {
+  var touch = e.touches[0];
+  var me = new MouseEvent("mousemove", {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  canvas.dispatchEvent(me);
+}, false);
+
+canvas.addEventListener("touchstart", function(e) {
+  mousePos = getTouchPos(canvas, e);
+  var touch = e.touches[0];
+  var me = new MouseEvent("mousedown", {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  canvas.dispatchEvent(me);
+}, false);
+
+canvas.addEventListener("touchend", function(e) {
+  var me = new MouseEvent("mouseup", {});
+  canvas.dispatchEvent(me);
+}, false);
+
+function getMousePos(canvasDom, mouseEvent) {
+  var rect = canvasDom.getBoundingClientRect();
+  return {
+    x: mouseEvent.clientX - rect.left,
+    y: mouseEvent.clientY - rect.top
+  }
+}
+
+function getTouchPos(canvasDom, touchEvent) {
+  var rect = canvasDom.getBoundingClientRect();
+  return {
+    x: touchEvent.touches[0].clientX - rect.left,
+    y: touchEvent.touches[0].clientY - rect.top
+  }
+}
+
+function renderCanvas() {
+  if (drawing) {
+    ctx.moveTo(lastPos.x, lastPos.y);
+    ctx.lineTo(mousePos.x, mousePos.y);
+    ctx.stroke();
+    lastPos = mousePos;
+  }
+}
+
+// Prevent scrolling when touching the canvas
+document.body.addEventListener("touchstart", function(e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchend", function(e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchmove", function(e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+
+(function drawLoop() {
+  requestAnimFrame(drawLoop);
+  renderCanvas();
+})();
+
+function clearCanvas() {
+  canvas.width = canvas.width;
+}
+
+// Set up the UI
+// var sigText = document.getElementById("sig-dataUrl");
+// var sigImage = document.getElementById("sig-image");
+var clearBtn = document.getElementById("sig-clearBtn");
+// var submitBtn = document.getElementById("sig-submitBtn");
+clearBtn.addEventListener("click", function(e) {
+  clearCanvas();
+  // sigText.innerHTML = "Data URL for your signature will go here!";
+  // sigImage.setAttribute("src", "");
+});
+// submitBtn.addEventListener("click", function(e) {
+//   var dataUrl = canvas.toDataURL();
+//   sigText.innerHTML = dataUrl;
+//   sigImage.setAttribute("src", dataUrl);
+// }, false);
+
+})();
+</script>
+<!-- canvas setting -->
