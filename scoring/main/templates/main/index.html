@@ -1,6 +1,6 @@
 {% load static %}
 <head>
-  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="{% static "main/js/jquery-1.9.1.min.js" %}"></script>
 </head>
 <style type="text/css">
   .tg  {border-collapse:collapse;border-spacing:0;}
@@ -28,8 +28,6 @@
         {% endfor %}
       </select>
     
-      
-
       <table class="tg">
       <thead>
         <tr>
