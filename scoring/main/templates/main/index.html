@@ -2,6 +2,7 @@
 <head>
   <script src="{% static "main/js/jquery-1.9.1.min.js" %}"></script>
 </head>
+
 <style type="text/css">
   .tg  {border-collapse:collapse;border-spacing:0;}
   .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -16,19 +17,28 @@
   border-radius: 15px;
   cursor: crosshair;
 }
+
+
 </style>
  <body>
-   <div >
-    <form method="POST" action="saveForm" id="mainForm">
-      {% csrf_token %}
-      <label for="draw_id">考生抽签号</label>
-      <select name="draw_id" id="draw_id">
-        {% for item in draw_id %}
-        <option value="{{item}}">{{item}}</option>   
-        {% endfor %}
-      </select>
+  <div id="mainContainer">
+    <h1 style="text-align: center">面试评分表</h1>
+  
     
-      <table class="tg">
+   <div style="text-align: right;">
+    <form method="POST" action="saveForm" id="mainForm" >
+      {% csrf_token %}
+      <div style="margin-bottom: 1cm;">
+        <label for="draw_id">考生抽签号</label>
+        <select name="draw_id" id="draw_id">
+          {% for item in draw_id %}
+          <option value="{{item}}">{{item}}</option>   
+          {% endfor %}
+        </select>
+      </div>
+      
+    
+      <table class="tg" id="mainTable">
       <thead>
         <tr>
           <th class="tg-nrix" colspan="2">测评要素</th>
@@ -73,8 +83,8 @@
         </tr>
         <tr>
           <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
-          <td class="tg-nrix" colspan="{{colspan}}" rowspan="2">
-            <textarea name="comment" id="comment" style="width: 100%; height:100%; text-align:center"></textarea>
+          <td class="tg-nrix" colspan="{{colspan}}" rowspan="2" id="comment_cell">
+            <textarea name="comment" id="comment" ></textarea>
           </td>
           <td class="tg-nrix">总分</td>
           <td class="tg-nrix">
@@ -93,7 +103,6 @@
               <!-- Content -->
       <div class="container">
              <canvas id="sig-canvas">
-               
              </canvas>
       </div>
     
@@ -102,18 +111,16 @@
         </tr>
       </tbody>
       </table>
-    
       <input name="sig_url" id="sig_url" hidden />
       <input name="current_dt" id="current_dt" hidden/>
-    
-      
     </form>
 
-    
-    <button class="btn btn-primary" id="sig-submitBtn">提交表格</button>
-
-    <button class="btn btn-default" id="sig-clearBtn">清除签名</button>
+    <div style="text-align: right;">
+      <button class="btn btn-default" id="sig-clearBtn">清除签名</button>
+      <button class="btn btn-primary" id="sig-submitBtn">提交表格</button>
+    </div>
    </div>
+  </div>
 
 
 
@@ -126,6 +133,9 @@
   var canvas = document.getElementById("sig-canvas");
 
   submitBtn.addEventListener("click", function(e) {
+    if(!confirm("确认提交?")){
+      return
+    }
     var dataUrl = canvas.toDataURL();
     document.getElementById("sig_url").value = dataUrl;
     var now = new Date();
@@ -157,6 +167,21 @@
 }
 </script>
 
+<script>
+  function setTableStyle() {
+    
+    var tableWidth = document.getElementById("mainTable").offsetWidth
+    document.getElementById("mainContainer").style.width = tableWidth;
+
+    var comment_cell_width = document.getElementById("comment_cell").offsetWidth
+    var comment_cell_height = document.getElementById("comment_cell").offsetHeight
+
+    document.getElementById("comment").style.width = comment_cell_width;
+    document.getElementById("comment").style.height = comment_cell_height;
+    
+}
+</script>
+
 <!-- init -->
 <script>
   $( document ).ready(function() {
@@ -178,6 +203,8 @@
       scoring_items[i].appendChild(select_elem);
     }
     calTotalScore();
+
+    setTableStyle();
   });
 </script>
 <!-- init -->
@@ -192,6 +219,8 @@
 
 <!-- scroll lock -->
 <script>
+  
+
   // src/utils/scroll-lock.js
   const $body = document.querySelector('body');
   let scrollPosition = 0;
@@ -216,9 +245,9 @@
 
 <!-- canvas setting -->
 <script>
-  document.body.addEventListener('touchmove', function(event) {
-event.preventDefault();
-}, false); 
+//   document.body.addEventListener('touchmove', function(event) {
+// event.preventDefault();
+// }, false); 
 
   (function() {
 window.requestAnimFrame = (function(callback) {
@@ -264,6 +293,7 @@ canvas.addEventListener("touchstart", function(e) {
 }, false);
 
 canvas.addEventListener("touchmove", function(e) {
+  e.preventDefault();
   var touch = e.touches[0];
   var me = new MouseEvent("mousemove", {
     clientX: touch.clientX,
@@ -323,11 +353,12 @@ document.body.addEventListener("touchend", function(e) {
     e.preventDefault();
   }
 }, false);
-document.body.addEventListener("touchmove", function(e) {
-  if (e.target == canvas) {
-    e.preventDefault();
-  }
-}, false);
+// document.body.addEventListener("touchmove", function(e) {
+  
+//   if (e.target == canvas) {
+//     e.preventDefault();
+//   }
+// }, false);
 
 (function drawLoop() {
   requestAnimFrame(drawLoop);
