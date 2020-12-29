@@ -155,3 +155,5 @@ LOGGING = {
         },
     },
 }
+
+AUTH_PASSWORD_VALIDATORS = []

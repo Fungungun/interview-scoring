@@ -1,18 +1,25 @@
 from django.shortcuts import render, redirect
-from .config import scoring_items, draw_id, examiner_id
+from .config import scoring_items, draw_id
 import logging
 import re
 import base64
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+
 
 logger = logging.getLogger(__name__) 
 
+
 # Create your views here.
+@login_required
 def index(request):
+    logger.info(f"Current examiner id is {request.user.examiner.examiner_id}")
+
     context = {
         "draw_id": draw_id,
         "scoring_items": scoring_items,
         "colspan": len(scoring_items) - 2,
-        "examiner_id": examiner_id,
+        "examiner_id": request.user.examiner.examiner_id,
         }
     return render(request, 'main/index.html', context)
 

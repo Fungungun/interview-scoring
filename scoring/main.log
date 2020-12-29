@@ -58,3 +58,23 @@
 2020-12-27 22:30:24,641 [INFO] main.views: examiner id: 1
 2020-12-27 22:30:24,642 [INFO] main.views: current date: 2020-12-27
 2020-12-27 22:30:24,642 [INFO] main.views: comment: 
+2020-12-28 08:16:28,751 [INFO] main.views: draw id: 1-1
+2020-12-28 08:16:28,751 [INFO] main.views: examiner id: 1
+2020-12-28 08:16:28,753 [INFO] main.views: current date: 2020-12-28
+2020-12-28 08:16:28,753 [INFO] main.views: comment: 
+2020-12-28 08:17:24,316 [INFO] main.views: draw id: 1-1
+2020-12-28 08:17:24,317 [INFO] main.views: examiner id: 1
+2020-12-28 08:17:24,318 [INFO] main.views: current date: 2020-12-28
+2020-12-28 08:17:24,319 [INFO] main.views: comment: 
+2020-12-28 13:28:55,427 [INFO] main.views: draw id: 1-1
+2020-12-28 13:28:55,427 [INFO] main.views: examiner id: 1
+2020-12-28 13:28:55,427 [INFO] main.views: current date: 2020-12-28
+2020-12-28 13:28:55,428 [INFO] main.views: comment: 
+2020-12-29 23:41:51,851 [INFO] main.views: Current user id is 2
+2020-12-29 23:42:20,874 [INFO] main.views: Current examiner id is 1
+2020-12-29 23:42:54,954 [INFO] main.views: Current examiner id is 1
+2020-12-29 23:43:03,373 [INFO] main.views: Current examiner id is 1
+2020-12-29 23:43:05,610 [INFO] main.views: Current examiner id is 1
+2020-12-29 23:43:35,957 [INFO] main.views: Current examiner id is 1
+2020-12-29 23:52:17,141 [INFO] main.views: Current examiner id is 1
+2020-12-29 23:52:35,552 [INFO] main.views: Current examiner id is 1

@@ -93,11 +93,7 @@
         </tr>
         <tr>
           <td class="tg-nrix">
-            <select name="examiner_id" id="examiner_id">
-            {% for item in examiner_id %}
-            <option value="{{item}}">{{item}}</option>   
-            {% endfor %}
-          </select> 号考官签名</td>
+            {{examiner_id}} 号考官签名</td>
           <td class="tg-nrix">
             
               <!-- Content -->
@@ -111,9 +107,23 @@
         </tr>
       </tbody>
       </table>
+
+      <div style="text-align: left; margin-top: 0.3cm;">
+        要求：
+        <br>
+        1. 总分在90分以上或50分以下者，应在“考官评语”栏记录该考生答题的突出表现或较差表现。
+        <br>
+        2. 如考生有体貌不端，口吃等情况，亦请在“考官评语”栏中如实记载。
+      </div>
+
+      <div style="text-align: right;" id="formDate">
+          
+      </div>
       <input name="sig_url" id="sig_url" hidden />
       <input name="current_dt" id="current_dt" hidden/>
     </form>
+
+    
 
     <div style="text-align: right;">
       <button class="btn btn-default" id="sig-clearBtn">清除签名</button>
@@ -182,11 +192,8 @@
 }
 </script>
 
-<!-- init -->
 <script>
-  $( document ).ready(function() {
-    
-
+  function setScoringOptions() {
     var scoring_items = document.getElementsByClassName("scoring_item");
     for (var i = 0; i < scoring_items.length; i++) {
       var select_elem = document.createElement("select");
@@ -202,9 +209,26 @@
       }
       scoring_items[i].appendChild(select_elem);
     }
-    calTotalScore();
+  }
 
+</script>
+
+<script>
+
+  function setCurrentDate(){
+    var now = new Date();
+    var dateString = now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日"
+    // alert(dateString);
+    document.getElementById("formDate").innerHTML =  dateString;
+  }
+</script>
+<!-- init -->
+<script>
+  $( document ).ready(function() {
+    setScoringOptions();
+    calTotalScore();
     setTableStyle();
+    setCurrentDate();
   });
 </script>
 <!-- init -->
@@ -219,8 +243,6 @@
 
 <!-- scroll lock -->
 <script>
-  
-
   // src/utils/scroll-lock.js
   const $body = document.querySelector('body');
   let scrollPosition = 0;

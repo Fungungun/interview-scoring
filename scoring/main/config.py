@@ -20,9 +20,9 @@ for r in room_person:
 # print(draw_id)
 
 # 考官号
-examiner_id = [
-    1, 2, 3, 4, 5, 6, 7
-]
+# examiner_id = [
+#     1, 2, 3, 4, 5, 6, 7
+# ]
 
 scoring_items = [
     {

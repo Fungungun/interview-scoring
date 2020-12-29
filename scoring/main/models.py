@@ -4,18 +4,38 @@ from django.db import models
 from django.db import models
 from datetime import date
 
+
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
+
+class Examiner(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    examiner_id = models.IntegerField(default=0)
+    room_id = models.IntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.user.username}-房间{self.room_id}-考官{self.examiner_id}"
+
+@receiver(post_save, sender=User)
+def create_user_examiner(sender, instance, created, **kwargs):
+    if created:
+        Examiner.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_examiner(sender, instance, **kwargs):
+    instance.examiner.save()
+
+@receiver(post_delete, sender=Examiner)
+def post_delete_user(sender, instance, *args, **kwargs):
+    instance.user.delete()
+
+
 class Interviewer(models.Model):
     draw_id = models.CharField(max_length=10)
 
     def __str__(self):
         return self.draw_id
-
-
-class Examiner(models.Model):
-    examiner_id = models.IntegerField(default=0)
-
-    def __str__(self):
-        return self.examiner_id
 
 class SingleScoreForm(models.Model):
     score_1 = models.IntegerField(default=0)
