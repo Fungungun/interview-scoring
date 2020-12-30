@@ -28,7 +28,7 @@
    <div style="text-align: right;">
     <form method="POST" action="saveForm" id="mainForm" >
       {% csrf_token %}
-      <div style="margin-bottom: 1cm;">
+      <div>
         <label for="draw_id">考生抽签号</label>
         <select name="draw_id" id="draw_id">
           {% for item in draw_id %}
@@ -108,7 +108,7 @@
       </tbody>
       </table>
 
-      <div style="text-align: left; margin-top: 0.3cm;">
+      <div style="text-align: left;">
         要求：
         <br>
         1. 总分在90分以上或50分以下者，应在“考官评语”栏记录该考生答题的突出表现或较差表现。

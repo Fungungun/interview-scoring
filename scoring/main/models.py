@@ -14,6 +14,8 @@ class Examiner(models.Model):
     examiner_id = models.IntegerField(default=0)
     room_id = models.IntegerField(default=1)
 
+    is_examiner = models.BooleanField(default=True)
+
     def __str__(self):
         return f"{self.user.username}-房间{self.room_id}-考官{self.examiner_id}"
 
@@ -33,16 +35,13 @@ def post_delete_user(sender, instance, *args, **kwargs):
 
 class Interviewer(models.Model):
     draw_id = models.CharField(max_length=10)
+    room_id = models.IntegerField(default=1)
 
     def __str__(self):
         return self.draw_id
 
 class SingleScoreForm(models.Model):
-    score_1 = models.IntegerField(default=0)
-    score_2 = models.IntegerField(default=0)
-    score_3 = models.IntegerField(default=0)
-    score_4 = models.IntegerField(default=0)
-    score_5 = models.IntegerField(default=0)
+    score = models.CharField(max_length=1000, default="")
     comment = models.CharField(max_length=1000)
     sig_filename = models.CharField(max_length=1000)
     date = models.DateField(default=date.today)
@@ -50,5 +49,7 @@ class SingleScoreForm(models.Model):
     interviewer = models.ForeignKey(Interviewer, on_delete=models.CASCADE)
     examiner = models.ForeignKey(Examiner, on_delete=models.CASCADE)
 
+    formFinished = models.BooleanField(default=False)
+
     def __str__(self):
-        return f"({self.interviewer.draw_id})-({self.examiner.examiner_id})-({self.date})"
+        return f"({self.interviewer.draw_id})-({self.examiner.examiner_id})-({self.date})-({self.formFinished})"

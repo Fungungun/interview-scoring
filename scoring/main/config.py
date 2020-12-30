@@ -1,28 +1,26 @@
 
 #房间号：人数
 room_person = {
-    "1": 10,
-    "2": 10,
-    "3": 10,
-    "4": 10,
-    "5": 10,
-    "6": 10,
-    "7": 10,
-    "8": 10,
+    "1": 20,
+    "2": 20,
 }
-
 
 draw_id = []
 for r in room_person:
     for j in range(1, room_person[r] + 1):
         draw_id.append(f"{r}-{j}")
 
-# print(draw_id)
 
-# 考官号
-# examiner_id = [
-#     1, 2, 3, 4, 5, 6, 7
-# ]
+room_interviewer = {
+    "1": 20,
+    "2": 20,
+}
+
+room_examiner = {
+    "1": 8,
+    "2": 8,
+}
+
 
 scoring_items = [
     {
