@@ -5,7 +5,9 @@ import re
 import base64
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-
+from .models import SingleScoreForm
+from django.http import HttpResponse
+import json 
 
 logger = logging.getLogger(__name__) 
 
@@ -13,13 +15,40 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 @login_required
 def index(request):
-    logger.info(f"Current examiner id is {request.user.examiner.examiner_id}")
+    
+
+    examiner = request.user.examiner
+    logger.info(f"Examiner {examiner.examiner_id} in room {examiner.room_id} logged in")
+    
+    # get the first unfinished form
+    all_forms = SingleScoreForm.objects.filter(examiner=examiner)
+    
+    if len(all_forms) == 0:
+        return HttpResponse("所有考生均已打分完毕")
+
+    finished_forms = all_forms.filter(formFinished=True)
+    current_form =all_forms.filter(formFinished=False).order_by('id')[0]
+
+    # score = current_form.score.split(",")
+    score = "1,2,3".split(",")
+    print(score)
+
+    dataDictionary = {
+        "examiner_id": examiner.examiner_id,
+        "draw_id": current_form.interviewer.draw_id,
+        "score": [int(x) for x in score],
+        "comment": current_form.comment,
+        "formFinished": current_form.formFinished,
+    }
+    
+    dataJSON = json.dumps(dataDictionary) 
 
     context = {
-        "draw_id": draw_id,
+        "data": dataJSON,
+        "examiner": examiner,
+        "current_form": current_form,
         "scoring_items": scoring_items,
         "colspan": len(scoring_items) - 2,
-        "examiner_id": request.user.examiner.examiner_id,
         }
     return render(request, 'main/index.html', context)
 

@@ -26,6 +26,8 @@ def PrePopulateDB(apps, schema_editor):
 
     SingleScoreForm = apps.get_model('main', 'SingleScoreForm')
     for examiner in Examiner.objects.all():
+        if examiner.examiner_id == 0:
+            continue
         for interviewer in Interviewer.objects.all():
             SingleScoreForm.objects.create(
                 score="",

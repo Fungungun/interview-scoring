@@ -31,9 +31,10 @@
       <div>
         <label for="draw_id">考生抽签号</label>
         <select name="draw_id" id="draw_id">
-          {% for item in draw_id %}
-          <option value="{{item}}">{{item}}</option>   
+          {% for item in finished_forms %}
+          <option value="{{item.interviewer.id}}">{{iteminterviewer.draw_id}}</option>   
           {% endfor %}
+          <option value="{{current_form.interviewer.id}}">{{current_form.interviewer.draw_id}}</option>   
         </select>
       </div>
       
@@ -76,10 +77,15 @@
         </tr>
         <tr>
           <td class="tg-nrix" colspan="2">要素得分</td>
-          {% for item in scoring_items %}
-          <td class="tg-nrix scoring_item" maximum_score="{{item.maximum_score}}">
+          {% if  not current_form.formFinished %}
+            {% for item in scoring_items %}
+            <td class="tg-nrix scoring_item" maximum_score="{{item.maximum_score}}">
+            </td>
+            {% endfor %}
+          {% else %}
+          <td class="tg-nrix scoring_item">0
           </td>
-          {% endfor %}
+          {% endif %}
         </tr>
         <tr>
           <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
@@ -93,7 +99,7 @@
         </tr>
         <tr>
           <td class="tg-nrix">
-            {{examiner_id}} 号考官签名</td>
+            {{examiner.examiner_id}} 号考官签名</td>
           <td class="tg-nrix">
             
               <!-- Content -->
@@ -132,9 +138,20 @@
    </div>
   </div>
 
-
+  <h4 id='alldata'></h4>
 
 </body> 
+
+<script> 
+  var data = JSON.parse("{{data|escapejs}}"); 
+  var dataNode = document.getElementById('alldata'); 
+  dataNode.innerHTML+="{{data|escapejs}}"; 
+  dataNode = document.getElementById('neatdata'); 
+  for(var x in data){ 
+      dataNode.innerHTML+=x+' : '+data[x]+'<br><br>'; 
+  } 
+</script>
+
 
 
 <script>
