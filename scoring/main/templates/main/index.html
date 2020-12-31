@@ -28,6 +28,7 @@
    <div style="text-align: right;">
     <form method="POST" action="saveForm" id="mainForm" >
       {% csrf_token %}
+      <input value={{current_form.id}} name="singlescoreform_id" id="singlescoreform_id" hidden />
       <div>
         <label for="draw_id">考生抽签号</label>
         <select name="draw_id" id="draw_id">
@@ -94,6 +95,7 @@
         </tr>
         <tr>
           <td class="tg-nrix">
+            <input value={{examiner.id}} name="examiner_pk" id="examiner_pk" hidden/>
             {{examiner.examiner_id}} 号考官签名</td>
           <td class="tg-nrix">
             

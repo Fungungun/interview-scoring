@@ -67,22 +67,44 @@ def saveSignature(sig_filename, ImageData):
 def saveForm(request):
     
     try:
-        draw_id = request.POST["draw_id"]
-        logger.info(f"draw id: {draw_id}")
-        print(type(draw_id))
+        
+        score = []
+        for k in request.POST.keys():
+            if "selected-score" in k:
+                score.append(request.POST[k])
+        score = ",".join(score)
+        # logger.info(f"score: {score}")
+        
+        singlescoreform_id = request.POST["singlescoreform_id"]
+        # logger.info(f"singlescoreform_id: {singlescoreform_id}")
 
-        examiner_id = request.POST["examiner_id"]
-        logger.info(f"examiner id: {examiner_id}")
+        interviewer_pk = request.POST["draw_id"]
+        # logger.info(f"interviewer_pk: {interviewer_pk}")
+
+        examiner_pk = request.POST["examiner_pk"]
+        # logger.info(f"examiner_pk: {examiner_pk}")
 
         current_date = request.POST["current_dt"]
-        logger.info(f"current date: {current_date}")
+        # logger.info(f"current date: {current_date}")
 
         comment = request.POST["comment"]
-        logger.info(f"comment: {comment}")
+        # logger.info(f"comment: {comment}")
 
-        # for k in 
+        singlescoreform = SingleScoreForm.objects.get(id=singlescoreform_id)
+        # logger.info(f"singlescoreform: {singlescoreform}")
+
         
-        output_signature_filename = f"signatures/({draw_id})-({examiner_id})-({current_date}).png"
+        singlescoreform.score = score
+        singlescoreform.current_date = current_date
+        singlescoreform.comment = comment
+        singlescoreform.formFinished = True 
+        # singlescoreform.interviewer = interviewer_pk
+        # singlescoreform.examiner = examiner_pk
+
+        singlescoreform.save()
+
+        
+        output_signature_filename = f"signatures/({interviewer_pk})-({examiner_pk})-({current_date}).png"
         ImageData = request.POST.get("sig_url")
         saveSignature(output_signature_filename, ImageData)
         

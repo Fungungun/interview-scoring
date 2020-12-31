@@ -258,3 +258,89 @@
 2020-12-31 23:39:59,652 [INFO] main.views: Examiner 1 in room 1 logged in
 2020-12-31 23:40:22,985 [INFO] main.views: Examiner 1 in room 1 logged in
 2020-12-31 23:40:28,970 [INFO] main.views: Examiner 1 in room 1 logged in
+2020-12-31 23:55:44,392 [INFO] main.views: Examiner 1 in room 1 logged in
+2020-12-31 23:55:52,251 [INFO] main.views: Examiner 1 in room 1 logged in
+2020-12-31 23:55:56,906 [INFO] main.views: Examiner 1 in room 1 logged in
+2020-12-31 23:56:24,447 [INFO] main.views: Examiner 1 in room 1 logged in
+2020-12-31 23:56:31,966 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:02:03,523 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:02:18,810 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:05:13,022 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:05:14,239 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:05:14,592 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:05:14,875 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:05:15,074 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:05:15,173 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:06:34,413 [INFO] main.views: interviewer_id: 4
+2021-01-01 00:06:34,413 [ERROR] main.views: 'examiner_pk'
+2021-01-01 00:06:34,427 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:08:17,105 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:08:21,889 [INFO] main.views: interviewer_id: 4
+2021-01-01 00:08:21,890 [INFO] main.views: examiner pk: 22
+2021-01-01 00:08:21,890 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:08:21,890 [INFO] main.views: comment: asdcascasd
+2021-01-01 00:08:21,890 [ERROR] main.views: name 'examiner_id' is not defined
+2021-01-01 00:08:21,900 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:09:29,847 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:09:29,847 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:09:29,847 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:09:29,847 [INFO] main.views: comment: asdcasdcasdcasdc
+2021-01-01 00:09:29,868 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:11:37,946 [ERROR] main.views: 'singlescoreform_id'
+2021-01-01 00:11:37,963 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:11:42,889 [INFO] main.views: singlescoreform_id: 44
+2021-01-01 00:11:42,889 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:11:42,889 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:11:42,889 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:11:42,889 [INFO] main.views: comment: asdcasdcasdcasd
+2021-01-01 00:11:42,899 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:12:54,356 [INFO] main.views: singlescoreform_id: 44
+2021-01-01 00:12:54,356 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:12:54,356 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:12:54,357 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:12:54,357 [INFO] main.views: comment: asdc
+2021-01-01 00:12:54,360 [INFO] main.views: singlescoreform: (1-4)-(1)-(2020-12-30)-(False)
+2021-01-01 00:12:54,377 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:13:59,412 [INFO] main.views: singlescoreform_id: 44
+2021-01-01 00:13:59,412 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:13:59,412 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:13:59,413 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:13:59,413 [INFO] main.views: comment: asldcknasldknasdc°¢ÈøµÂ²Å¿¼ÂÇÄÃËÜÁÏ´ü¿ª³ýÄã
+2021-01-01 00:13:59,523 [INFO] main.views: singlescoreform: (1-4)-(1)-(2020-12-30)-(False)
+2021-01-01 00:13:59,523 [ERROR] main.views: Cannot assign "'4'": "SingleScoreForm.interviewer" must be a "Interviewer" instance.
+2021-01-01 00:13:59,555 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:15:38,197 [INFO] main.views: singlescoreform_id: 44
+2021-01-01 00:15:38,197 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:15:38,197 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:15:38,197 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:15:38,198 [INFO] main.views: comment: °¢ÈøµÂ²ÁÊÃµÄ²Áµô
+2021-01-01 00:15:38,201 [INFO] main.views: singlescoreform: (1-4)-(1)-(2020-12-30)-(False)
+2021-01-01 00:15:38,216 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:17:13,157 [INFO] main.views: score: 1111
+2021-01-01 00:17:13,158 [INFO] main.views: singlescoreform_id: 44
+2021-01-01 00:17:13,158 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:17:13,164 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:17:13,165 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:17:13,165 [INFO] main.views: comment: °¢Ë¹¶Ù²ÁÉÏµµ´Î
+2021-01-01 00:17:13,168 [INFO] main.views: singlescoreform: (1-4)-(1)-(2020-12-30)-(False)
+2021-01-01 00:17:13,184 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:18:06,574 [INFO] main.views: score: 1,1,1,1
+2021-01-01 00:18:06,574 [INFO] main.views: singlescoreform_id: 44
+2021-01-01 00:18:06,574 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:18:06,574 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:18:06,574 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:18:06,574 [INFO] main.views: comment: °¢Ë¹¶Ù²ÁÉÏµµ´Î
+2021-01-01 00:18:06,582 [INFO] main.views: singlescoreform: (1-4)-(1)-(2020-12-30)-(False)
+2021-01-01 00:18:06,598 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:18:42,535 [INFO] main.views: score: 7,14,2,10
+2021-01-01 00:18:42,535 [INFO] main.views: singlescoreform_id: 44
+2021-01-01 00:18:42,535 [INFO] main.views: interviewer_pk: 4
+2021-01-01 00:18:42,535 [INFO] main.views: examiner_pk: 22
+2021-01-01 00:18:42,535 [INFO] main.views: current date: 2021-1-1
+2021-01-01 00:18:42,536 [INFO] main.views: comment: °¢ÈøµÂ²ÁÊÃµÄ²Áµô
+2021-01-01 00:18:42,539 [INFO] main.views: singlescoreform: (1-4)-(1)-(2020-12-30)-(False)
+2021-01-01 00:18:42,710 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:19:05,385 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:19:25,570 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:19:58,474 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 00:20:07,469 [INFO] main.views: Examiner 1 in room 1 logged in
