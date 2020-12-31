@@ -32,9 +32,9 @@
         <label for="draw_id">考生抽签号</label>
         <select name="draw_id" id="draw_id">
           {% for item in finished_forms %}
-          <option value="{{item.interviewer.id}}">{{iteminterviewer.draw_id}}</option>   
+          <option value="{{item.interviewer.id}}">{{item.interviewer.draw_id}}</option>   
           {% endfor %}
-          <option value="{{current_form.interviewer.id}}">{{current_form.interviewer.draw_id}}</option>   
+          <option value="{{current_form.interviewer.id}}" selected>{{current_form.interviewer.draw_id}}</option>   
         </select>
       </div>
       
@@ -77,15 +77,10 @@
         </tr>
         <tr>
           <td class="tg-nrix" colspan="2">要素得分</td>
-          {% if  not current_form.formFinished %}
             {% for item in scoring_items %}
             <td class="tg-nrix scoring_item" maximum_score="{{item.maximum_score}}">
             </td>
             {% endfor %}
-          {% else %}
-          <td class="tg-nrix scoring_item">0
-          </td>
-          {% endif %}
         </tr>
         <tr>
           <td class="tg-nrix" colspan="2" rowspan="2">考官评语</td>
@@ -131,25 +126,61 @@
 
     
 
-    <div style="text-align: right;">
+    <div style="text-align: right;" id="button-group">
       <button class="btn btn-default" id="sig-clearBtn">清除签名</button>
       <button class="btn btn-primary" id="sig-submitBtn">提交表格</button>
     </div>
    </div>
   </div>
 
-  <h4 id='alldata'></h4>
 
 </body> 
 
 <script> 
-  var data = JSON.parse("{{data|escapejs}}"); 
-  var dataNode = document.getElementById('alldata'); 
-  dataNode.innerHTML+="{{data|escapejs}}"; 
-  dataNode = document.getElementById('neatdata'); 
-  for(var x in data){ 
-      dataNode.innerHTML+=x+' : '+data[x]+'<br><br>'; 
-  } 
+
+  // var current_form = JSON.parse("{{current_form_json|escapejs}}"); 
+
+  var finished_forms = JSON.parse("{{finished_forms_json|escapejs}}"); 
+  
+
+  $("#draw_id").on("change", function(){
+    var interviewer_id = $(this).val();
+
+    for (let item of finished_forms){
+      if (item["interviewer"] == interviewer_id){
+        LoadFinishedForm(item);
+        return
+      }
+    }
+
+    document.location.href="/"; // redirect back to home
+  })
+
+  function LoadFinishedForm(singlescoreform){
+    // update score 
+    var score_list = singlescoreform["score"].split(",").map(x=>+x);
+    var scoring_items = document.getElementsByClassName("scoring_item");
+    for (var i = 0; i < scoring_items.length; ++i){
+      scoring_items[i].innerHTML = score_list[i];
+    }
+
+    // calculate total score
+    var scoreNew = score_list.reduce((a, b) => a + b, 0);
+    document.getElementById("total_score").value = scoreNew;
+
+
+    // update comment 
+    document.getElementById("comment").innerHTML = singlescoreform["comment"];
+    document.getElementById("comment").readOnly = true;
+
+    var buttongroup = document.getElementById("button-group");
+    if(typeof(buttongroup) != 'undefined' && buttongroup != null){
+      buttongroup.remove();
+    }
+    
+
+    // TODO: update signature
+  }
 </script>
 
 

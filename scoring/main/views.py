@@ -1,13 +1,17 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.core import serializers
+from django.core.serializers.json import DjangoJSONEncoder
+
 from .config import scoring_items, draw_id
+from .models import SingleScoreForm
+
+import json 
 import logging
 import re
 import base64
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import login_required
-from .models import SingleScoreForm
-from django.http import HttpResponse
-import json 
 
 logger = logging.getLogger(__name__) 
 
@@ -27,26 +31,18 @@ def index(request):
         return HttpResponse("所有考生均已打分完毕")
 
     finished_forms = all_forms.filter(formFinished=True)
-    current_form =all_forms.filter(formFinished=False).order_by('id')[0]
+    finished_forms_dic = finished_forms.values("pk", "score", "comment", "interviewer", "formFinished")
+    finished_forms_json = json.dumps(list(finished_forms_dic), cls=DjangoJSONEncoder)
 
-    # score = current_form.score.split(",")
-    score = "1,2,3".split(",")
-    print(score)
-
-    dataDictionary = {
-        "examiner_id": examiner.examiner_id,
-        "draw_id": current_form.interviewer.draw_id,
-        "score": [int(x) for x in score],
-        "comment": current_form.comment,
-        "formFinished": current_form.formFinished,
-    }
-    
-    dataJSON = json.dumps(dataDictionary) 
+    current_form = all_forms.filter(formFinished=False).order_by('id')[0]
+    current_form_json = serializers.serialize("json", [current_form])
 
     context = {
-        "data": dataJSON,
         "examiner": examiner,
         "current_form": current_form,
+        "current_form_json": current_form_json,
+        "finished_forms": finished_forms,
+        "finished_forms_json": finished_forms_json,
         "scoring_items": scoring_items,
         "colspan": len(scoring_items) - 2,
         }
