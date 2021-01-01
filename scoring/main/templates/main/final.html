@@ -1,0 +1,185 @@
+{% load static %}
+<head>
+  <script src="{% static "main/js/jquery-1.9.1.min.js" %}"></script>
+</head>
+
+<style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    overflow:hidden;padding:10px 0px;word-break:normal;}
+  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    font-weight:normal;overflow:hidden;padding:10px 0px;word-break:normal;}
+  .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+  .tg .tg-nrix{text-align:center;vertical-align:middle}
+  </style>
+
+<body>
+  <div id="mainContainer">
+    <h1 style="text-align: center">面试成绩汇总表</h1>
+    
+      <div style="display: inline-block; width: 100%; margin-bottom: 0.5cm;">
+        <div style="float: left;">
+          考生抽签号: 
+          <select name="draw_id" id="draw_id">
+            <option value="-1">(请选择一个号码)</option>
+            {% for item in interviewers %}
+            <option value="{{item.id}}">{{item.draw_id}}</option>   
+            {% endfor %}
+          </select>
+        </div>
+        <div style="float: right;" id="formDate"></div>
+      </div>
+    
+
+    <div>
+      <table class="tg" id="mainTable">
+        <colgroup>
+          <col style="width: 121.88889px">
+          <col style="width: 148.88889px">
+          <col style="width: 168.88889px">
+          <col style="width: 65.88889px">
+          <col style="width: 65.88889px">
+          <col style="width: 79.88889px">
+          <col style="width: 72.88889px">
+          <col style="width: 78.88889px">
+          </colgroup>
+        <thead>
+          <tr>
+            <th class="tg-9wq8">考官座位号</th>
+            <th class="tg-9wq8">一</th>
+            <th class="tg-9wq8">二</th>
+            <th class="tg-9wq8">三</th>
+            <th class="tg-9wq8">四</th>
+            <th class="tg-nrix">五</th>
+            <th class="tg-nrix">六</th>
+            <th class="tg-nrix">七</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-9wq8">分值</td>
+            <td class="tg-9wq8 final-score">无</td>
+            <td class="tg-9wq8 final-score">无</td>
+            <td class="tg-9wq8 final-score">无</td>
+            <td class="tg-9wq8 final-score">无</td>
+            <td class="tg-nrix final-score">无</td>
+            <td class="tg-nrix final-score">无</td>
+            <td class="tg-nrix final-score">无</td>
+          </tr>
+          <tr>
+            <td class="tg-nrix" rowspan="2">计算面试成绩</td>
+            <td class="tg-nrix">去掉一个最高分</td>
+            <td class="tg-nrix">去掉一个最低分</td>
+            <td class="tg-nrix" colspan="2">剩余得分合计</td>
+            <td class="tg-nrix" rowspan="2">面试成绩（平均分）</td>
+            <td class="tg-nrix" colspan="2" rowspan="2" id="final_avg_score">无</td>
+          </tr>
+          <tr>
+            <td class="tg-nrix" id="max_score">无</td>
+            <td class="tg-nrix" id="min_score">无</td>
+            <td class="tg-nrix" colspan="2" id="final_total_score">无</td>
+          </tr>
+          <tr>
+            <td class="tg-nrix">主考官宣布成绩</td>
+            <td class="tg-nrix" colspan="7" id="score_announcement">无</td>
+          </tr>
+          <tr>
+            <td class="tg-nrix">成绩统计 <br>（签字）</td>
+            <td class="tg-nrix"></td>
+            <td class="tg-nrix">复核监督 <br>（签字）</td>
+            <td class="tg-nrix" colspan="2"></td>
+            <td class="tg-nrix">主考官   <br>（签字）</td>
+            <td class="tg-nrix" colspan="2"></td>
+          </tr>
+        </tbody>
+        </table>
+    </div>
+  
+    <div style="text-align: right; margin-right: 4cm; margin-top: 0.5cm">面试考生签字：</div>
+
+    
+  <div style="text-align: center; margin-top: 2cm;">
+    <button id="printbutton" onclick="printCurrentPage()">打印面试成绩汇总表</button>
+  </div>
+  </div>
+
+  
+
+  </body>
+
+  <!-- init -->
+<script>
+  $( document ).ready(function() {
+    setTableStyle();
+    setCurrentDate();
+  });
+</script>
+<!-- init -->
+
+<script>
+  $("#draw_id").on("change", function(){
+    // alert($(this).val());
+    var interviewer_pk = $(this).val();
+    if (interviewer_pk < 0) return ;
+    fetchData(interviewer_pk);
+  })
+  function fetchData(interviewer_pk) {
+    $.ajax({
+        type: 'POST',
+        url: "/fetchscore",
+        data: {
+          interviewer_pk: interviewer_pk
+        },
+        success: function (result) {
+          updateFinalForm(result);
+        },
+        error: function (request, status, error) {
+          document.location.href="/final"; // redirect back to home
+          alert('该考生分数信息暂未统计完毕');
+        }
+    });
+  }
+  function updateFinalForm(result){
+    var data = JSON.parse(result); 
+    var total_scores = data["total_scores"];
+    var total_scores_cell = document.getElementsByClassName("final-score");
+    for (var i = 0; i < total_scores.length; i++){
+      total_scores_cell[i].innerHTML = total_scores[i];
+    }
+    document.getElementById("max_score").innerHTML = data["max_score"];
+    document.getElementById("min_score").innerHTML = data["min_score"];
+    document.getElementById("final_total_score").innerHTML = data["final_total_score"];
+    document.getElementById("final_avg_score").innerHTML = data["final_avg_score"];
+
+    var score_announcement = $("#draw_id").val() + "号考生，你的面试成绩：去掉一个最高分" + data["max_score"] +"分，去掉一个最低分" + data["min_score"] + "分，最终面试得分为" + data["final_avg_score"]+ "分。"
+    document.getElementById("score_announcement").innerHTML = score_announcement;
+  }
+</script>
+<script>
+  function printCurrentPage(){
+    // set interviewer draw id to readonly
+
+
+    // hide print button and print 
+    document.getElementById("printbutton").style.visibility = "hidden";
+    window.print();
+    document.getElementById("printbutton").style.visibility = "visible";
+  }
+</script>
+  <script>
+
+    function setCurrentDate(){
+      var now = new Date();
+      var dateString = "时间：" + now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日"
+      // alert(dateString);
+      document.getElementById("formDate").innerHTML =  dateString;
+    }
+  </script>
+
+<script>
+  function setTableStyle() {
+    
+    var tableWidth = document.getElementById("mainTable").offsetWidth
+    document.getElementById("mainContainer").style.width = tableWidth;    
+}
+</script>

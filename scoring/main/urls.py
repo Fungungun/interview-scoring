@@ -3,6 +3,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('saveForm', views.saveForm)
+    path('final', views.final),
+    path('fetchscore', views.fetchScore),
+    path('saveForm', views.saveForm),
 ]
 

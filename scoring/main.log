@@ -344,3 +344,61 @@
 2021-01-01 00:19:25,570 [INFO] main.views: Examiner 1 in room 1 logged in
 2021-01-01 00:19:58,474 [INFO] main.views: Examiner 1 in room 1 logged in
 2021-01-01 00:20:07,469 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 14:19:04,899 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 14:19:39,676 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 14:24:34,096 [INFO] main.views: Examiner 0 in room 1 logged in
+2021-01-01 14:25:00,436 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-01 22:58:38,998 [INFO] main.views: <QueryDict: {'interviewer_pk': ['2']}>
+2021-01-01 23:02:24,311 [INFO] main.views: <QueryDict: {'interviewer_pk': ['1']}>
+2021-01-01 23:03:48,901 [INFO] main.views: <QueryDict: {'interviewer_pk': ['1']}>
+2021-01-01 23:50:36,845 [INFO] main.views: interviewer_pk is 3
+2021-01-01 23:51:50,249 [INFO] main.views: interviewer_pk is 4
+2021-01-01 23:52:02,149 [INFO] main.views: interviewer_pk is 2
+2021-01-01 23:56:16,284 [INFO] main.views: interviewer_pk is 3
+2021-01-01 23:56:50,763 [INFO] main.views: interviewer_pk is 2
+2021-01-01 23:57:01,308 [INFO] main.views: interviewer_pk is 2
+2021-01-01 23:57:21,320 [INFO] main.views: interviewer_pk is 6
+2021-01-01 23:57:23,726 [INFO] main.views: interviewer_pk is 3
+2021-01-01 23:57:42,270 [INFO] main.views: interviewer_pk is 3
+2021-01-01 23:58:35,022 [INFO] main.views: interviewer_pk is 5
+2021-01-01 23:58:59,371 [INFO] main.views: interviewer_pk is 2
+2021-01-01 23:59:31,236 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:01:00,613 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:04:00,524 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:04:20,244 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:04:37,075 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:05:58,213 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:06:14,156 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:06:41,699 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:08:06,440 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:09:57,373 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:11:38,852 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:11:59,331 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:15:20,099 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:19:43,437 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:23:49,308 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:24:00,619 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:27:26,492 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:27:37,985 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:28:23,661 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:30:28,540 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:33:19,275 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:33:29,403 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:33:43,165 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:33:53,667 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:34:03,900 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:34:32,183 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:34:38,707 [INFO] main.views: interviewer_pk is 2
+2021-01-02 00:35:53,987 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:35:56,162 [INFO] main.views: interviewer_pk is 2
+2021-01-02 00:36:53,572 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:36:54,843 [INFO] main.views: interviewer_pk is 2
+2021-01-02 00:37:11,612 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:37:13,083 [INFO] main.views: interviewer_pk is 2
+2021-01-02 00:37:40,869 [INFO] main.views: interviewer_pk is 2
+2021-01-02 00:38:12,339 [INFO] main.views: interviewer_pk is 5
+2021-01-02 00:38:23,098 [INFO] main.views: interviewer_pk is 2
+2021-01-02 00:38:26,843 [INFO] main.views: interviewer_pk is 5
+2021-01-02 00:38:29,612 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:38:31,131 [INFO] main.views: interviewer_pk is 4
+2021-01-02 00:38:38,332 [INFO] main.views: interviewer_pk is 1
