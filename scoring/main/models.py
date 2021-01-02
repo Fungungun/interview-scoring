@@ -17,7 +17,7 @@ class Examiner(models.Model):
     is_examiner = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.user.username}-房间{self.room_id}-考官{self.examiner_id}"
+        return f"{self.room_id}-{self.examiner_id}"
 
 @receiver(post_save, sender=User)
 def create_user_examiner(sender, instance, created, **kwargs):
@@ -52,4 +52,4 @@ class SingleScoreForm(models.Model):
     formFinished = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"({self.interviewer.draw_id})-({self.examiner.examiner_id})-({self.date})-({self.formFinished})"
+        return f"({self.interviewer.draw_id})-({self.examiner.examiner_id})-({self.formFinished})"

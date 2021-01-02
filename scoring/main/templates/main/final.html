@@ -58,13 +58,13 @@
         <tbody>
           <tr>
             <td class="tg-9wq8">分值</td>
-            <td class="tg-9wq8 final-score">无</td>
-            <td class="tg-9wq8 final-score">无</td>
-            <td class="tg-9wq8 final-score">无</td>
-            <td class="tg-9wq8 final-score">无</td>
-            <td class="tg-nrix final-score">无</td>
-            <td class="tg-nrix final-score">无</td>
-            <td class="tg-nrix final-score">无</td>
+            <td class="tg-9wq8" id="final-score-1">无</td>
+            <td class="tg-9wq8" id="final-score-2">无</td>
+            <td class="tg-9wq8" id="final-score-3">无</td>
+            <td class="tg-9wq8" id="final-score-4">无</td>
+            <td class="tg-nrix" id="final-score-5">无</td>
+            <td class="tg-nrix" id="final-score-6">无</td>
+            <td class="tg-nrix" id="final-score-7">无</td>
           </tr>
           <tr>
             <td class="tg-nrix" rowspan="2">计算面试成绩</td>
@@ -141,17 +141,23 @@
   }
   function updateFinalForm(result){
     var data = JSON.parse(result); 
+    
     var total_scores = data["total_scores"];
+    var finished_examiners = data["finished_examiners"]
     var total_scores_cell = document.getElementsByClassName("final-score");
-    for (var i = 0; i < total_scores.length; i++){
-      total_scores_cell[i].innerHTML = total_scores[i];
+    for (var i = 0; i < finished_examiners.length; i++){
+     var final_score_element_id = "final-score-" + finished_examiners[i];
+     var elem = document.getElementById(final_score_element_id)
+     elem.innerHTML = total_scores[i];
     }
     document.getElementById("max_score").innerHTML = data["max_score"];
     document.getElementById("min_score").innerHTML = data["min_score"];
     document.getElementById("final_total_score").innerHTML = data["final_total_score"];
     document.getElementById("final_avg_score").innerHTML = data["final_avg_score"];
 
-    var score_announcement = $("#draw_id").val() + "号考生，你的面试成绩：去掉一个最高分" + data["max_score"] +"分，去掉一个最低分" + data["min_score"] + "分，最终面试得分为" + data["final_avg_score"]+ "分。"
+    var sel = document.getElementById("draw_id");
+    var draw_id = sel.options[sel.selectedIndex].text;
+    var score_announcement = draw_id + "号考生，你的面试成绩：去掉一个最高分" + data["max_score"] +"分，去掉一个最低分" + data["min_score"] + "分，最终面试得分为" + data["final_avg_score"]+ "分。"
     document.getElementById("score_announcement").innerHTML = score_announcement;
   }
 </script>

@@ -402,3 +402,55 @@
 2021-01-02 00:38:29,612 [INFO] main.views: interviewer_pk is 1
 2021-01-02 00:38:31,131 [INFO] main.views: interviewer_pk is 4
 2021-01-02 00:38:38,332 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:39:12,131 [INFO] main.views: interviewer_pk is 1
+2021-01-02 00:39:13,307 [INFO] main.views: interviewer_pk is 13
+2021-01-02 00:39:16,533 [INFO] main.views: interviewer_pk is 17
+2021-01-02 15:41:49,956 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 15:41:56,201 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 15:42:06,963 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 15:43:45,085 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 15:43:46,582 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 15:45:30,045 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 15:45:51,049 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 15:53:27,072 [INFO] main.views: Examiner 2 in room 2 logged in
+2021-01-02 15:53:40,926 [INFO] main.views: Examiner 2 in room 2 logged in
+2021-01-02 15:54:11,103 [INFO] main.views: Examiner 2 in room 1 logged in
+2021-01-02 15:54:23,814 [INFO] main.views: Examiner 2 in room 1 logged in
+2021-01-02 15:54:36,512 [INFO] main.views: Examiner 2 in room 1 logged in
+2021-01-02 15:54:57,725 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-02 15:55:09,950 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-02 15:55:20,977 [INFO] main.views: Examiner 5 in room 1 logged in
+2021-01-02 15:55:24,986 [INFO] main.views: Examiner 5 in room 1 logged in
+2021-01-02 15:55:39,778 [INFO] main.views: interviewer_pk is 1
+2021-01-02 15:56:25,406 [INFO] main.views: interviewer_pk is 1
+2021-01-02 15:56:35,062 [INFO] main.views: interviewer_pk is 1
+2021-01-02 15:56:50,263 [INFO] main.views: interviewer_pk is 1
+2021-01-02 15:57:03,822 [INFO] main.views: interviewer_pk is 9
+2021-01-02 15:57:06,287 [INFO] main.views: interviewer_pk is 1
+2021-01-02 15:57:29,686 [INFO] main.views: interviewer_pk is 2
+2021-01-02 15:57:31,910 [INFO] main.views: interviewer_pk is 1
+2021-01-02 16:00:31,159 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:03:41,583 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:04:00,719 [INFO] main.views: Examiner 5 in room 1 logged in
+2021-01-02 22:07:50,166 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:09:35,566 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:10:01,106 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:10:15,074 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:10:50,757 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:11:45,992 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:13:35,789 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:13:56,700 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:14:10,357 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:18:47,845 [INFO] main.views: Examiner 5 in room 1 logged in
+2021-01-02 22:18:51,053 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:23:16,415 [INFO] main.views: Examiner 5 in room 1 logged in
+2021-01-02 22:24:15,349 [INFO] main.views: interviewer_pk is 2
+2021-01-02 22:24:18,351 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:25:16,899 [INFO] main.views: Examiner 3 in room 1 logged in
+2021-01-02 22:25:55,955 [INFO] main.views: Examiner 3 in room 1 logged in
+2021-01-02 22:26:03,064 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:27:27,062 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:27:35,990 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:28:11,014 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:28:57,254 [INFO] main.views: interviewer_pk is 1
+2021-01-02 22:29:15,613 [INFO] main.views: interviewer_pk is 1

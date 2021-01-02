@@ -145,13 +145,21 @@ def fetchScore(request):
     logger.info(f"interviewer_pk is {interviewer_pk}")
 
     finished_forms = SingleScoreForm.objects.filter(interviewer=interviewer_pk, formFinished=True).order_by("examiner")
-    raw_score = finished_forms.values("score")
-    if len(raw_score) <= 2:
+    if len(finished_forms) <= 2:
         raise Exception("Waiting for more scores")
+    
+    finished_examiners = [x.examiner.examiner_id for x in finished_forms]
+    print(finished_examiners)
+    
+    raw_score = finished_forms.values("score")
     data = process_score(raw_score)
+
+    data["finished_examiners"] = finished_examiners
     return JsonResponse(json.dumps(data), safe=False)
 
+
 def process_score(raw_score):
+    
     
     raw_score = [x["score"] for x in raw_score]
     raw_score = [x.split(",") for x in raw_score]
@@ -166,7 +174,7 @@ def process_score(raw_score):
     min_score = min(total_scores)
 
     final_total_score = all_total_score - max_score - min_score
-    final_avg_score = final_total_score / (len(total_scores) - 2)
+    final_avg_score = round(final_total_score / (len(total_scores) - 2), 1)
 
     
     data = {
