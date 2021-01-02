@@ -149,7 +149,7 @@ def fetchScore(request):
         raise Exception("Waiting for more scores")
     
     finished_examiners = [x.examiner.examiner_id for x in finished_forms]
-    print(finished_examiners)
+    # print(finished_examiners)
     
     raw_score = finished_forms.values("score")
     data = process_score(raw_score)

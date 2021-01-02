@@ -19,7 +19,7 @@
     
       <div style="display: inline-block; width: 100%; margin-bottom: 0.5cm;">
         <div style="float: left;">
-          考生抽签号: 
+          考生抽签号: <label id="draw_id_print" style="visibility: hidden;"></label>
           <select name="draw_id" id="draw_id">
             <option value="-1">(请选择一个号码)</option>
             {% for item in interviewers %}
@@ -163,13 +163,28 @@
 </script>
 <script>
   function printCurrentPage(){
-    // set interviewer draw id to readonly
+    var sel = document.getElementById("draw_id");
+    var draw_id = sel.options[sel.selectedIndex].text;
 
 
     // hide print button and print 
     document.getElementById("printbutton").style.visibility = "hidden";
+    // change draw id to hidden
+    document.getElementById("draw_id").style.visibility = "hidden";
+    // show plaint text draw id 
+    document.getElementById("draw_id_print").style.visibility = "visible";
+    document.getElementById("draw_id_print").innerHTML = draw_id;
+
     window.print();
+
     document.getElementById("printbutton").style.visibility = "visible";
+    document.getElementById("draw_id").style.visibility = "visible";
+    document.getElementById("draw_id_print").style.visibility = "hidden";
+
+    
+    
+    
+
   }
 </script>
   <script>
