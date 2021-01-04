@@ -1,6 +1,7 @@
 {% load static %}
 <head>
   <script src="{% static "main/js/jquery-1.9.1.min.js" %}"></script>
+  <script src="{% static "main/js/html2canvas.js" %}"></script>
 </head>
 
 <style type="text/css">
@@ -124,6 +125,7 @@
       </div>
       <input name="sig_url" id="sig_url" hidden />
       <input name="current_dt" id="current_dt" hidden/>
+      <input name="screenshot_url" id="screenshot_url" hidden />
     </form>
 
     
@@ -135,8 +137,9 @@
    </div>
   </div>
 
-
 </body> 
+
+
 
 <script> 
 
@@ -196,8 +199,17 @@
     if(!confirm("确认提交?")){
       return
     }
-    var dataUrl = canvas.toDataURL();
-    document.getElementById("sig_url").value = dataUrl;
+    var sigUrl = canvas.toDataURL();
+    document.getElementById("sig_url").value = sigUrl;
+
+    // html2canvas(document.getElementById("mainContainer")).then(function(canvas) {
+    //   document.body.appendChild(canvas);
+    //   var scrshotUrl = canvas.toDataURL();
+    //   document.getElementById("screenshot_url").value = scrshotUrl;
+    // });
+    html2canvas(document.body).then(function(canvas) {
+    document.body.appendChild(canvas);
+    });
     var now = new Date();
     var dateString = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate()
     // alert(dateString);

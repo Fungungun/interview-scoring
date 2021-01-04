@@ -5,16 +5,21 @@
 
 <style type="text/css">
   .tg  {border-collapse:collapse;border-spacing:0;}
-  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  .tg td{border-color:black;border-style:solid;border-width:2px;font-family:Arial, sans-serif;font-size:14px;
     overflow:hidden;padding:10px 0px;word-break:normal;}
-  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  .tg th{border-color:black;border-style:solid;border-width:2px;font-family:Arial, sans-serif;font-size:14px;
     font-weight:normal;overflow:hidden;padding:10px 0px;word-break:normal;}
   .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
   .tg .tg-nrix{text-align:center;vertical-align:middle}
+
+  .content {
+  max-width: 700px;
+  margin: auto;
+}
   </style>
 
 <body>
-  <div id="mainContainer">
+  <div class="content" id="mainContainer">
     <h1 style="text-align: center">面试成绩汇总表</h1>
     
       <div style="display: inline-block; width: 100%; margin-bottom: 0.5cm;">
@@ -34,14 +39,14 @@
     <div>
       <table class="tg" id="mainTable">
         <colgroup>
-          <col style="width: 121.88889px">
-          <col style="width: 148.88889px">
-          <col style="width: 168.88889px">
-          <col style="width: 65.88889px">
-          <col style="width: 65.88889px">
-          <col style="width: 79.88889px">
-          <col style="width: 72.88889px">
-          <col style="width: 78.88889px">
+          <col style="width: 140px">
+          <col style="width: 60px">
+          <col style="width: 60px">
+          <col style="width: 60px">
+          <col style="width: 60px">
+          <col style="width: 60px">
+          <col style="width: 60px">
+          <col style="width: 60px">
           </colgroup>
         <thead>
           <tr>
@@ -68,10 +73,10 @@
           </tr>
           <tr>
             <td class="tg-nrix" rowspan="2">计算面试成绩</td>
-            <td class="tg-nrix">去掉一个最高分</td>
-            <td class="tg-nrix">去掉一个最低分</td>
+            <td class="tg-nrix">去掉一个<br>最高分</td>
+            <td class="tg-nrix">去掉一个<br>最低分</td>
             <td class="tg-nrix" colspan="2">剩余得分合计</td>
-            <td class="tg-nrix" rowspan="2">面试成绩（平均分）</td>
+            <td class="tg-nrix" rowspan="2">面试成绩<br>(平均分)</td>
             <td class="tg-nrix" colspan="2" rowspan="2" id="final_avg_score">无</td>
           </tr>
           <tr>
@@ -81,7 +86,7 @@
           </tr>
           <tr>
             <td class="tg-nrix">主考官宣布成绩</td>
-            <td class="tg-nrix" colspan="7" id="score_announcement">无</td>
+            <td class="tg-nrix" colspan="7"><p id="score_announcement" style="text-align: left; margin-left: 0.2cm;">无</p></td>
           </tr>
           <tr>
             <td class="tg-nrix">成绩统计 <br>（签字）</td>
@@ -180,6 +185,7 @@
     document.getElementById("printbutton").style.visibility = "visible";
     document.getElementById("draw_id").style.visibility = "visible";
     document.getElementById("draw_id_print").style.visibility = "hidden";
+    document.getElementById("draw_id_print").innerHTML = "";
 
     
     

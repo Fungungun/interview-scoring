@@ -456,3 +456,258 @@
 2021-01-02 22:29:15,613 [INFO] main.views: interviewer_pk is 1
 2021-01-02 23:02:14,284 [INFO] main.views: interviewer_pk is 1
 2021-01-02 23:02:23,052 [INFO] main.views: interviewer_pk is 1
+2021-01-02 23:05:54,517 [INFO] main.views: interviewer_pk is 1
+2021-01-02 23:09:16,471 [INFO] main.views: interviewer_pk is 1
+2021-01-02 23:10:46,239 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 23:50:43,643 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 23:50:47,621 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 23:50:50,669 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 23:50:51,589 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-02 23:50:54,730 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 00:00:55,541 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 00:01:44,934 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 00:01:54,851 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:34:47,799 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:34:50,074 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:36:02,189 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:50:29,862 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:50:46,838 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 12:50:46,853 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:51:32,752 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 12:51:32,767 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:52:10,834 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 12:52:10,845 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:52:27,916 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 12:52:27,929 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:53:09,254 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 12:53:09,267 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:53:58,801 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:53:59,662 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:54:00,085 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:54:00,348 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 12:54:00,994 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:00:17,706 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:02:23,657 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:02:49,826 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:03:00,285 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:03:04,015 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:03:04,028 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:03:38,097 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:03:38,109 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:04:40,795 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:04:40,807 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:06:35,148 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:06:46,236 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:06:46,249 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:06:54,022 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:06:54,030 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:07:08,657 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:07:08,667 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:07:37,302 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:07:37,311 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:10:30,485 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:33:18,038 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:33:18,045 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:33:29,522 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:33:33,695 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:33:33,703 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:33:56,882 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:34:12,683 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:34:12,691 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:34:34,319 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:34:34,326 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:35:01,533 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:35:03,481 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:35:03,490 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:35:06,311 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:35:08,525 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:35:08,532 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:35:38,399 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:35:41,263 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:35:41,270 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:47:50,732 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:47:55,253 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:47:55,265 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:48:06,125 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:51:02,175 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:51:02,186 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:51:04,911 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:51:04,923 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:51:44,932 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:51:57,126 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:51:57,140 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:51:59,559 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:52:06,757 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:52:06,769 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:52:15,216 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:52:15,227 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:52:50,912 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:53:25,092 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:53:25,101 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:53:25,108 [ERROR] main.views: 'singlescoreform_id'
+2021-01-03 13:53:30,233 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:53:30,247 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:54:07,888 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:54:10,987 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:54:10,999 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:54:29,167 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:54:36,718 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:54:50,790 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:54:53,995 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:54:54,007 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:56:43,648 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:56:57,429 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:56:57,440 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:56:57,469 [ERROR] main.views: 'singlescoreform_id'
+2021-01-03 13:57:00,759 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:57:00,774 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:58:32,010 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:58:32,025 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:58:44,262 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:59:01,657 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 13:59:01,669 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:59:09,008 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 13:59:19,542 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 19:25:20,835 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 19:25:20,855 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 19:25:43,788 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 19:25:43,800 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 20:34:45,375 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 20:37:10,437 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 20:41:22,916 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 20:41:46,688 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 20:43:23,582 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 20:46:13,911 [INFO] main.views: interviewer_pk is 1
+2021-01-03 20:50:19,056 [INFO] main.views: interviewer_pk is 1
+2021-01-03 20:51:10,809 [INFO] main.views: interviewer_pk is 2
+2021-01-03 20:51:27,389 [INFO] main.views: interviewer_pk is 1
+2021-01-03 20:52:58,155 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:12:07,717 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 21:12:36,506 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:14:36,985 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 21:16:27,679 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 21:16:28,588 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 21:17:37,312 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 21:17:38,251 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 21:17:50,779 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:17:57,600 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 21:22:34,850 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:22:36,990 [INFO] main.views: interviewer_pk is 2
+2021-01-03 21:22:39,635 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:23:09,239 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:23:58,228 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:26:19,441 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:38:43,781 [INFO] main.views: interviewer_pk is 2
+2021-01-03 21:38:46,346 [INFO] main.views: interviewer_pk is 10
+2021-01-03 21:38:48,396 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:40:33,111 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-03 21:41:40,492 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 21:49:38,311 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:49:39,382 [INFO] main.views: interviewer_pk is 2
+2021-01-03 21:49:43,514 [INFO] main.views: interviewer_pk is 2
+2021-01-03 21:49:47,754 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:50:40,481 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-03 21:52:46,070 [INFO] main.views: Examiner 7 in room 1 logged in
+2021-01-03 21:53:26,685 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-03 21:53:27,610 [INFO] main.views: Examiner 7 in room 1 logged in
+2021-01-03 21:53:39,115 [INFO] main.views: interviewer_pk is 1
+2021-01-03 21:54:41,449 [ERROR] main.views: 'singlescoreform_id'
+2021-01-03 21:54:53,032 [ERROR] main.views: 'singlescoreform_id'
+2021-01-04 08:15:18,645 [INFO] main.views: Examiner 7 in room 1 logged in
+2021-01-04 08:15:32,980 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-04 08:16:41,777 [INFO] main.views: Examiner 3 in room 1 logged in
+2021-01-04 08:17:56,627 [INFO] main.views: Examiner 2 in room 1 logged in
+2021-01-04 08:19:01,939 [INFO] main.views: Examiner 3 in room 1 logged in
+2021-01-04 08:19:04,463 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-04 08:19:49,096 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-04 08:21:25,671 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-04 08:21:26,588 [INFO] main.views: Examiner 2 in room 1 logged in
+2021-01-04 08:22:30,165 [INFO] main.views: Examiner 5 in room 1 logged in
+2021-01-04 08:23:23,675 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-04 08:24:25,442 [INFO] main.views: Examiner 5 in room 1 logged in
+2021-01-04 08:24:27,821 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-04 08:24:28,886 [INFO] main.views: Examiner 7 in room 1 logged in
+2021-01-04 08:24:59,997 [INFO] main.views: Examiner 7 in room 1 logged in
+2021-01-04 08:25:20,815 [ERROR] main.views: 'singlescoreform_id'
+2021-01-04 08:25:58,085 [ERROR] main.views: 'singlescoreform_id'
+2021-01-04 08:26:13,104 [INFO] main.views: Examiner 3 in room 1 logged in
+2021-01-04 08:26:20,984 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-04 08:26:27,893 [INFO] main.views: interviewer_pk is 2
+2021-01-04 08:26:40,644 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-04 08:26:41,554 [INFO] main.views: Examiner 6 in room 1 logged in
+2021-01-04 08:26:55,334 [ERROR] main.views: 'singlescoreform_id'
+2021-01-04 08:27:08,518 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-04 08:27:09,424 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-04 08:28:22,847 [INFO] main.views: Examiner 7 in room 1 logged in
+2021-01-04 08:28:52,714 [INFO] main.views: interviewer_pk is 2
+2021-01-04 08:30:21,610 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-04 08:30:43,292 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-04 08:32:48,044 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-04 08:33:54,523 [INFO] main.views: Examiner 7 in room 1 logged in
+2021-01-04 08:34:29,909 [INFO] main.views: interviewer_pk is 7
+2021-01-04 08:34:34,073 [INFO] main.views: interviewer_pk is 2
+2021-01-04 08:46:46,062 [INFO] main.views: Examiner 4 in room 1 logged in
+2021-01-04 11:13:00,286 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:13:03,421 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:13:06,069 [INFO] main.views: interviewer_pk is 3
+2021-01-04 11:13:25,278 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:14:36,926 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:14:42,757 [INFO] main.views: interviewer_pk is 3
+2021-01-04 11:14:45,181 [INFO] main.views: interviewer_pk is 11
+2021-01-04 11:14:47,398 [INFO] main.views: interviewer_pk is 3
+2021-01-04 11:14:49,589 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:14:52,038 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:14:55,253 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:16:22,749 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:31:00,007 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:31:06,194 [INFO] main.views: interviewer_pk is 3
+2021-01-04 11:31:10,038 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:36:21,006 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:52:27,485 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:53:06,987 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:53:38,389 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:53:44,461 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:54:21,052 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:54:41,836 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:56:30,124 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:57:05,251 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:57:09,283 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:57:11,236 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:57:13,020 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:57:14,563 [INFO] main.views: interviewer_pk is 1
+2021-01-04 11:57:16,444 [INFO] main.views: interviewer_pk is 2
+2021-01-04 11:59:08,164 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:00:05,716 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:00:07,820 [INFO] main.views: interviewer_pk is 2
+2021-01-04 12:00:11,237 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:00:12,916 [INFO] main.views: interviewer_pk is 2
+2021-01-04 12:00:16,180 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:00:20,268 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:00:23,516 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:00:47,485 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:01:33,981 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:01:38,925 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:01:49,076 [INFO] main.views: interviewer_pk is 2
+2021-01-04 12:02:10,445 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:03:45,637 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:04:11,604 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:04:14,227 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:07:03,980 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:10:52,844 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:11:31,268 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:11:32,571 [INFO] main.views: interviewer_pk is 2
+2021-01-04 12:11:33,995 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:11:35,476 [INFO] main.views: interviewer_pk is 2
+2021-01-04 12:11:36,763 [INFO] main.views: interviewer_pk is 3
+2021-01-04 12:11:39,228 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:11:40,748 [INFO] main.views: interviewer_pk is 2
+2021-01-04 12:11:44,075 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:12:07,212 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:13:08,869 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:13:16,796 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:15:29,443 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:15:32,564 [INFO] main.views: interviewer_pk is 2
+2021-01-04 12:15:33,915 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:15:36,036 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:15:41,339 [INFO] main.views: interviewer_pk is 1
+2021-01-04 12:16:15,285 [INFO] main.views: interviewer_pk is 1

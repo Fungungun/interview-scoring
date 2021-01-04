@@ -58,7 +58,11 @@ def index(request):
 
 def saveSignature(sig_filename, ImageData):
     dataUrlPattern = re.compile('data:image/(png|jpeg);base64,(.*)$')
+    print(type(ImageData))
+    print(ImageData[:50])
+    print(dataUrlPattern.match(ImageData))
     ImageData = dataUrlPattern.match(ImageData).group(2)
+    
 
     # If none or len 0, means illegal image data
     if ImageData == None or len(ImageData) == 0:
@@ -111,9 +115,15 @@ def saveForm(request):
         singlescoreform.save()
 
         
-        output_signature_filename = f"signatures/({interviewer_pk})-({examiner_pk})-({current_date}).png"
+        output_signature_filename = f"signatures/({singlescoreform.interviewer.draw_id})_{singlescoreform.examiner.examiner_id}.png"
         ImageData = request.POST.get("sig_url")
         saveSignature(output_signature_filename, ImageData)
+
+        output_screenshot_filename = f"singlescoreforms/({singlescoreform.interviewer.draw_id})_{singlescoreform.examiner.examiner_id}.png"
+        print(output_screenshot_filename)
+        ImageData = request.POST.get("screenshot_url")
+        print(ImageData)
+        saveSignature(output_screenshot_filename, ImageData)
         
         
     except Exception as e:
