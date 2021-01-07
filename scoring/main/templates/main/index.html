@@ -16,16 +16,19 @@
   #sig-canvas {
   border: 2px dotted #CCCCCC;
   border-radius: 15px;
-  cursor: crosshair;
+  cursor: crosshair; 
 }
 
 
+.content {
+  max-width: 820px;
+  margin: auto;
+}
+
 </style>
  <body>
-  <div id="mainContainer">
+  <div class="content" id="mainContainer">
     <h1 style="text-align: center">面试评分表</h1>
-  
-    
    <div style="text-align: right;">
     <form method="POST" action="saveForm" id="mainForm" >
       {% csrf_token %}
@@ -42,6 +45,14 @@
       
     
       <table class="tg" id="mainTable">
+        <colgroup>
+          <col style="width: 70px">
+          <col style="width: 80px">
+          <col style="width: 110px">
+          <col style="width: 110px">
+          <col style="width: 110px">
+          <col style="width: 90px">
+        </colgroup>
       <thead>
         <tr>
           <th class="tg-nrix" colspan="2">测评要素</th>
@@ -196,7 +207,9 @@
   var canvas = document.getElementById("sig-canvas");
 
   submitBtn.addEventListener("click", function(e) {
-    if(!confirm("确认提交?")){
+    var msg = "最终打分为" + document.getElementById("total_score").value + ",是否提交？";
+    
+    if(!confirm(msg)){
       return
     }
     var sigUrl = canvas.toDataURL();
@@ -231,10 +244,11 @@
     var scoreNew = 0
     var scoring_items = document.getElementsByClassName("scoring_item");
     for (var i = 0; i < scoring_items.length; i++) {
-      var select_elem = scoring_items[i].getElementsByTagName("select").item(0);
+      var select_elem = scoring_items[i].getElementsByTagName("input").item(0);
       // console.log(select_elem.value);
       scoreNew += Number(select_elem.value)
     }
+    scoreNew = parseFloat(scoreNew).toFixed(2);
     document.getElementById("total_score").value = scoreNew;
 }
 </script>
@@ -258,19 +272,44 @@
   function setScoringOptions() {
     var scoring_items = document.getElementsByClassName("scoring_item");
     for (var i = 0; i < scoring_items.length; i++) {
-      var select_elem = document.createElement("select");
+      var select_elem = document.createElement("input");
       select_elem.setAttribute("name", "selected-score-"+i);
+      select_elem.setAttribute("max_score", scoring_items[i].getAttribute("maximum_score"));
+      select_elem.setAttribute("min_score", "1");
+      // select_elem.setAttribute("class", "select-score-input")
+      // select_elem.setAttribute("type", "number");
+      // select_elem.setAttribute("step", "0.01");
+      select_elem.setAttribute("onchange", "validateScore(this)");
+      
+
+      select_elem.style.width = 70;
       // select_elem.setAttribute("id", "selected-score-"+i);
-      var maximum_score = scoring_items[i].getAttribute("maximum_score");
-      for (let option = 1; option <= Number(maximum_score); option++){
-        var option_elem = document.createElement("option");
-        option_elem.setAttribute("value", option);
-        option_elem.innerText = option;
-        select_elem.appendChild(option_elem);
-        select_elem.selectedIndex = 0;
-      }
+      // var maximum_score = scoring_items[i].getAttribute("maximum_score");
+      // for (let option = 1; option <= Number(maximum_score); option++){
+      //   var option_elem = document.createElement("option");
+      //   option_elem.setAttribute("value", option);
+      //   option_elem.innerText = option;
+      //   select_elem.appendChild(option_elem);
+      //   select_elem.selectedIndex = 0;
+      // }
       scoring_items[i].appendChild(select_elem);
     }
+    
+  }
+
+  function validateScore(e){
+    var max_score = e.getAttribute("max_score");
+    var min_score = e.getAttribute("min_score");
+    var msg = "请输入一个" + min_score + "到" + max_score + "之间的数字";
+    if (!isNaN(parseFloat(e.value))){
+      var new_value = parseFloat(e.value);
+      if (new_value >= parseFloat(min_score) && new_value <= parseFloat(max_score)){
+        e.value = new_value.toFixed(2);
+        return;
+      }      
+    }
+    e.value = "";
+    alert(msg);
   }
 
 </script>

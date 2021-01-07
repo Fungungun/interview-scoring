@@ -175,7 +175,7 @@ def process_score(raw_score):
     raw_score = [x.split(",") for x in raw_score]
     total_scores = []
     for x in raw_score:
-        total_score = functools.reduce(lambda a,b: a+b, [int(y) for y in x])
+        total_score = functools.reduce(lambda a,b: a+b, [float(y) for y in x])
         total_scores.append(total_score)
     
     all_total_score = functools.reduce(lambda a,b: a+b, total_scores)
@@ -183,8 +183,8 @@ def process_score(raw_score):
     max_score = max(total_scores)
     min_score = min(total_scores)
 
-    final_total_score = all_total_score - max_score - min_score
-    final_avg_score = round(final_total_score / (len(total_scores) - 2), 1)
+    final_total_score = round(all_total_score - max_score - min_score, 2)
+    final_avg_score = round(final_total_score / (len(total_scores) - 2), 2)
 
     
     data = {
