@@ -797,3 +797,119 @@
 2021-01-07 16:06:04,780 [INFO] main.views: Examiner 1 in room 1 logged in
 2021-01-07 16:06:43,292 [INFO] main.views: Examiner 1 in room 1 logged in
 2021-01-07 16:07:34,745 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:01:55,221 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:11:06,255 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:11:10,125 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:11:14,917 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:13:20,033 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:13:36,093 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:14:37,279 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:15:41,833 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:16:03,220 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:16:05,343 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:16:05,360 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:17:49,483 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:17:51,605 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:17:51,620 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:18:21,048 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:18:21,920 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:18:26,616 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:18:29,675 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:18:29,694 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:18:42,392 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:18:44,768 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:18:44,787 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:20:10,431 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:20:10,451 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:21:25,952 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:21:30,356 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:21:30,366 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:21:54,373 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:21:57,435 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:21:57,444 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:22:13,956 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:22:20,220 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:22:20,230 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:22:31,517 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:22:36,003 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:22:36,012 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:26:31,345 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:26:47,555 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:26:47,947 [ERROR] main.views: 'singlescoreform_id'
+2021-01-12 16:26:47,954 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:27:17,662 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:27:29,120 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:27:35,906 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:27:35,916 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:29:23,057 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:29:24,197 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:29:31,973 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:29:31,984 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:29:56,374 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:31:17,401 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:31:20,423 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:31:30,569 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:31:35,147 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:31:49,722 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:32:14,115 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:32:18,802 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:32:23,884 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:32:24,947 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:32:30,639 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:32:30,656 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:33:23,853 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:33:24,857 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:33:25,317 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:33:25,556 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 16:33:32,459 [ERROR] main.views: 'NoneType' object has no attribute 'group'
+2021-01-12 16:33:35,592 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:36,373 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:37,995 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:38,531 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:38,853 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:39,028 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:39,208 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:39,379 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:39,544 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:39,733 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:39,921 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:40,109 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:36:40,279 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:37:02,733 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:46:48,471 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:47:00,850 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:47:48,962 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:47:55,472 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:48:00,523 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:48:35,010 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:48:58,592 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:49:11,350 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:50:10,657 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 21:50:17,436 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:11:06,981 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:11:18,651 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:13:48,665 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:13:52,959 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:16:18,318 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:16:21,450 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:16:42,270 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:16:54,052 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:18:26,946 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:19:15,800 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:19:40,288 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:20:19,363 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:21:06,231 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:24:48,272 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:25:01,154 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:25:11,196 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:25:42,903 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:27:02,527 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:27:32,458 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:27:39,959 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:30:57,235 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:31:09,128 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:31:20,292 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:31:29,684 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:31:40,902 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:38:29,017 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-12 22:38:48,531 [INFO] main.views: Examiner 1 in room 1 logged in

@@ -4,6 +4,10 @@
   <script src="{% static "main/js/html2canvas.js" %}"></script>
 </head>
 
+
+
+
+
 <style type="text/css">
   .tg  {border-collapse:collapse;border-spacing:0;}
   .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -215,24 +219,33 @@
     var sigUrl = canvas.toDataURL();
     document.getElementById("sig_url").value = sigUrl;
 
-    // html2canvas(document.getElementById("mainContainer")).then(function(canvas) {
-    //   document.body.appendChild(canvas);
-    //   var scrshotUrl = canvas.toDataURL();
-    //   document.getElementById("screenshot_url").value = scrshotUrl;
-    // });
-    html2canvas(document.body).then(function(canvas) {
-    document.body.appendChild(canvas);
-    });
     var now = new Date();
     var dateString = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate()
-    // alert(dateString);
     document.getElementById("current_dt").value =  dateString;
-    // alert(document.getElementById("current_dt").value)
-
-    // alert(dataUrl);  
-    $("#mainForm").submit();
     
+    // hide two buttons 
+    document.getElementById("sig-clearBtn").style.visibility = "hidden";
+    document.getElementById("sig-submitBtn").style.visibility = "hidden";
+    // hide border of the draw id
+    document.getElementById("draw_id").style.border = "none";
+    // // scale zoomed element to original size
+    // document.body.style.zoom = 1.0
+
+
+    html2canvas(document.getElementById("mainContainer"), {scale: 2}).then(function(canvas) {
+        if(canvas){
+          var scrshotUrl = canvas.toDataURL();
+          document.getElementById("screenshot_url").value = scrshotUrl;
+        
+
+        
+        $("#mainForm").submit();
+
+        }
+        
+    });
   }, false);
+  
 </script>
 
 
@@ -416,13 +429,16 @@ canvas.addEventListener("touchstart", function(e) {
 }, false);
 
 canvas.addEventListener("touchmove", function(e) {
-  e.preventDefault();
+  
+    e.preventDefault();
   var touch = e.touches[0];
   var me = new MouseEvent("mousemove", {
     clientX: touch.clientX,
     clientY: touch.clientY
   });
   canvas.dispatchEvent(me);
+  
+  
 }, false);
 
 canvas.addEventListener("touchstart", function(e) {
