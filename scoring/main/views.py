@@ -151,8 +151,11 @@ def fetchScore(request):
     logger.info(f"interviewer_pk is {interviewer_pk}")
 
     finished_forms = SingleScoreForm.objects.filter(interviewer=interviewer_pk, formFinished=True).order_by("examiner")
+    print(finished_forms)
     if len(finished_forms) <= 2:
         raise Exception("Waiting for more scores")
+
+
     
     finished_examiners = [x.examiner.examiner_id for x in finished_forms]
     # print(finished_examiners)
@@ -167,10 +170,13 @@ def fetchScore(request):
 def process_score(raw_score):
     
     
+    
     raw_score = [x["score"] for x in raw_score]
     raw_score = [x.split(",") for x in raw_score]
+    logger.info(f"raw score is {raw_score}")
     total_scores = []
     for x in raw_score:
+        
         total_score = functools.reduce(lambda a,b: a+b, [float(y) for y in x])
         total_scores.append(total_score)
     
