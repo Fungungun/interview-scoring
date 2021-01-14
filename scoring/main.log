@@ -1021,3 +1021,25 @@
 2021-01-14 21:59:04,347 [INFO] main.views: raw score is [['20.00', '16.00', '9.00', '10.00'], ['25.00', '25.00', '20.00', '8.00'], ['29.00', '25.00', '23.00', '9.00'], ['21.00', '23.00', '20.00', '9.00'], ['21.00', '15.00', '25.00', ''], ['30.00', '24.00', '20.00', '8.00']]
 2021-01-14 21:59:06,830 [INFO] main.views: interviewer_pk is 3
 2021-01-14 21:59:06,842 [INFO] main.views: raw score is [['28.00', '25.00', '21.00', '8.00'], ['25.00', '17.00', '22.00', '7.00'], ['27.00', '26.00', '25.00', '8.00'], ['20.00', '20.00', '20.00', '10.00'], ['21.00', '16.00', '11.00', '8.00']]
+2021-01-14 22:06:35,981 [INFO] main.views: interviewer_pk is 2
+2021-01-14 22:06:35,995 [INFO] main.views: raw score is [['30.00', '20.00', '21.00', '10.00'], ['30.00', '27.00', '22.00', '9.00'], ['29.00', '25.00', '23.00', '8.00'], ['30.00', '25.00', '25.00', '10.00'], ['20.00', '20.00', '20.00', '10.00'], ['29.00', '24.00', '19.00', '8.00']]
+2021-01-14 22:06:37,803 [INFO] main.views: interviewer_pk is 1
+2021-01-14 22:06:37,815 [INFO] main.views: raw score is [['20.00', '16.00', '9.00', '10.00'], ['25.00', '25.00', '20.00', '8.00'], ['29.00', '25.00', '23.00', '9.00'], ['21.00', '23.00', '20.00', '9.00'], ['21.00', '15.00', '25.00', ''], ['30.00', '24.00', '20.00', '8.00']]
+2021-01-14 22:09:46,716 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:10:13,631 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:10:58,602 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:11:05,160 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:11:08,233 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:11:11,123 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:17:06,265 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:17:09,665 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:17:14,652 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:17:17,844 [ERROR] main.views: 'singlescoreform_id'
+2021-01-14 22:18:28,323 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:40:59,646 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:41:47,822 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:44:06,820 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:44:07,703 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:45:34,317 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:46:04,786 [INFO] main.views: Examiner 1 in room 1 logged in
+2021-01-14 22:46:20,348 [INFO] main.views: Examiner 1 in room 1 logged in

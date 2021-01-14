@@ -211,6 +211,13 @@
   var canvas = document.getElementById("sig-canvas");
 
   submitBtn.addEventListener("click", function(e) {
+    
+
+    var valid_score = checkAllScoreInput();
+    if (!valid_score){
+      return;
+    }
+
     var msg = "最终打分为" + document.getElementById("total_score").value + ",是否提交？";
     
     if(!confirm(msg)){
@@ -237,8 +244,6 @@
           var scrshotUrl = canvas.toDataURL();
           document.getElementById("screenshot_url").value = scrshotUrl;
         
-
-        
         $("#mainForm").submit();
 
         }
@@ -246,6 +251,18 @@
     });
   }, false);
   
+  function checkAllScoreInput(){
+    var scoring_items = document.getElementsByClassName("selected-score-input");
+    for (var i = 0; i < scoring_items.length; i++){
+      var valid_score = validateScore(scoring_items[i]);
+      if(!valid_score){
+        alert("请检查打分是否完整有效！");
+        return false;
+      }
+    }
+    return true;
+
+  }
 </script>
 
 
@@ -286,6 +303,7 @@
     var scoring_items = document.getElementsByClassName("scoring_item");
     for (var i = 0; i < scoring_items.length; i++) {
       var select_elem = document.createElement("input");
+      select_elem.setAttribute("class", "selected-score-input")
       select_elem.setAttribute("name", "selected-score-"+i);
       select_elem.setAttribute("max_score", scoring_items[i].getAttribute("maximum_score"));
       select_elem.setAttribute("min_score", "1");
@@ -293,6 +311,8 @@
       // select_elem.setAttribute("type", "number");
       // select_elem.setAttribute("step", "0.01");
       select_elem.setAttribute("onchange", "validateScore(this)");
+      
+      
       
 
       select_elem.style.width = 70;
@@ -311,6 +331,7 @@
   }
 
   function validateScore(e){
+    if (e.value.length == 0) return false;
     var max_score = e.getAttribute("max_score");
     var min_score = e.getAttribute("min_score");
     var msg = "请输入一个" + min_score + "到" + max_score + "之间的数字";
@@ -318,11 +339,12 @@
       var new_value = parseFloat(e.value);
       if (new_value >= parseFloat(min_score) && new_value <= parseFloat(max_score)){
         e.value = new_value.toFixed(2);
-        return;
+        return true;
       }      
     }
     e.value = "";
     alert(msg);
+    return false;
   }
 
 </script>
