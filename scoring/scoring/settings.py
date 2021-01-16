@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'scoring.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.bug.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
