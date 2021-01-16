@@ -108,7 +108,7 @@ def saveForm(request):
         # singlescoreform.interviewer = interviewer_pk
         # singlescoreform.examiner = examiner_pk
 
-        # singlescoreform.save()
+        singlescoreform.save()
 
         
         output_signature_filename = f"signatures/({singlescoreform.interviewer.draw_id})_{singlescoreform.examiner.examiner_id}.png"
