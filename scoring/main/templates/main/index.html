@@ -31,7 +31,7 @@
   margin-right: auto;
   margin-top: 0;
   margin-bottom: auto;
-  transform: translateY(-5%) scale(0.9);
+  /*transform: translateY(-5%) scale(0.9);*/
 }
 
 
@@ -79,7 +79,7 @@
           {% endfor %}
         </tr>
         <tr>
-          <td class="tg-nrix" rowspan="3">评分标准</td>
+          <td class="tg-nrix" rowspan="3">评分标准(等次)</td>
           <td class="tg-nrix">优</td>
           {% for item in scoring_items %}
           <td class="tg-nrix">{{item.good}}</td>
@@ -153,7 +153,7 @@
 
     <div style="text-align: right;" id="button-group">
       <button class="btn btn-default" id="sig-clearBtn">清除签名</button>
-      <button class="btn btn-primary" id="sig-submitBtn">提交表格</button>
+      <button class="btn btn-primary" id="sig-submitBtn">提交分数</button>
     </div>
    </div>
   </div>

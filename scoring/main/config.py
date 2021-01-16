@@ -25,7 +25,7 @@ room_examiner = {
 scoring_items = [
     {
         "id": 1,
-        "name":"职位及自我认知能力",
+        "name":"综合分析能力",
         "maximum_score": 35,
         "good":"30-35",
         "ok":"21-29",
@@ -33,7 +33,7 @@ scoring_items = [
     },
     {
         "id": 2,
-        "name":"综合分析能力",
+        "name":"沟通协调能力",
         "maximum_score": 30,
         "good":"25-30",
         "ok":"16-24",
@@ -41,7 +41,7 @@ scoring_items = [
     },
     {
         "id": 3,
-        "name":"应急应变能力",
+        "name":"实际工作能力",
         "maximum_score": 25,
         "good":"20-25",
         "ok":"11-19",
