@@ -192,7 +192,7 @@
 
     // calculate total score
     var scoreNew = score_list.reduce((a, b) => a + b, 0);
-    document.getElementById("total_score").value = scoreNew;
+    document.getElementById("total_score").value = scoreNew.toFixed(2);
 
 
     // update comment 

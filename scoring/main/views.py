@@ -177,7 +177,7 @@ def process_score(raw_score):
     total_scores = []
     for x in raw_score:
         
-        total_score = functools.reduce(lambda a,b: a+b, [float(y) for y in x])
+        total_score = round(functools.reduce(lambda a,b: a+b, [float(y) for y in x]), 2)
         total_scores.append(total_score)
     
     all_total_score = functools.reduce(lambda a,b: a+b, total_scores)
